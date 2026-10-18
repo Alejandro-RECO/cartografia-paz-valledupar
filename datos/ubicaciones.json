@@ -1,0 +1,70 @@
+{
+  "coordenadas_paradas": [
+    {
+      "id": "V-02",
+      "lat": 10.1826606,
+      "lng": -73.5866783,
+      "precision": "centro_corregimiento",
+      "etiqueta": "Mariangola (ubicación aproximada)",
+      "referencia": "Centro del corregimiento. Los hechos ocurrieron en una vivienda sobre la vía Mariangola–Valledupar, con hallazgo de los cuerpos a unos 2 km, cerca de un puente; punto exacto desconocido",
+      "fuente": "Google Maps, place_id ChIJp7902Zf4X44Rd3PAoHCkRDY",
+      "verificado_en_terreno": false
+    },
+    {
+      "id": "V-03",
+      "lat": 10.1826606,
+      "lng": -73.5866783,
+      "precision": "centro_corregimiento",
+      "etiqueta": "Mariangola (ubicación aproximada)",
+      "referencia": "Centro del corregimiento. Comparte punto con V-02; las víctimas fueron sacadas de viviendas del pueblo y halladas cerca del puente sobre la vía a Valledupar",
+      "fuente": "Google Maps, place_id ChIJp7902Zf4X44Rd3PAoHCkRDY",
+      "verificado_en_terreno": false
+    },
+    {
+      "id": "V-04",
+      "lat": 10.266416,
+      "lng": -73.7150188,
+      "precision": "centro_poblado",
+      "etiqueta": "Villa Germania, lugar de la selección (ubicación aproximada)",
+      "referencia": "Centro poblado de Villa Germania, donde se hizo la selección en la escuela. Los asesinatos ocurrieron más arriba, en la vereda El Diluvio, que no tiene ubicación verificable",
+      "fuente": "Google Maps, place_id ChIJ62kNzxJZ9Y4RCrrMg_pIdxs",
+      "verificado_en_terreno": false
+    },
+    {
+      "id": "V-06",
+      "lat": 10.4779116,
+      "lng": -73.2909352,
+      "precision": "barrio_aproximado",
+      "etiqueta": "Bello Horizonte, Valledupar (ubicación aproximada)",
+      "referencia": "Punto registrado como «Bello horizonte» en el occidente de la ciudad, coherente con el «noroccidente» que indica la prensa de 2001. El barrio El Futuro de los Niños no aparece en el mapa. Requiere verificación local: el barrio de invasión de 2001 puede no coincidir con este punto",
+      "fuente": "Google Maps, place_id ChIJKd8YUgC5io4RC3ZqZZ7DLlU",
+      "verificado_en_terreno": false
+    },
+    {
+      "id": "V-07",
+      "lat": 10.6963697,
+      "lng": -73.3553168,
+      "precision": "centro_corregimiento",
+      "etiqueta": "Atánquez (ubicación aproximada)",
+      "referencia": "Centro del corregimiento. Los hechos ocurrieron en la plaza de mercado y sus alrededores, que no están geolocalizados",
+      "fuente": "Google Maps, place_id ChIJW2cpcx_Oio4RYgAehMYWxpc",
+      "verificado_en_terreno": false
+    },
+    {
+      "id": "V-08",
+      "lat": 10.0796242,
+      "lng": -73.7359926,
+      "precision": "centro_corregimiento",
+      "etiqueta": "Caracolí (ubicación aproximada)",
+      "referencia": "Centro del corregimiento. El ataque ocurrió en una vivienda de una zona de invasión a unos 150 m de la cabecera",
+      "fuente": "Google Maps, place_id ChIJzW2HDXrxX44R6k-QcNSWTqo",
+      "verificado_en_terreno": false
+    }
+  ],
+  "reglas_mapa": [
+    "Mostrar siempre la etiqueta con «(ubicación aproximada)»",
+    "V-02 y V-03 comparten coordenadas: agruparlas en un solo marcador con dos paradas, o separarlas visualmente sin mover el punto real",
+    "No mover los puntos a un lugar «más exacto» sin una fuente nueva",
+    "Si una persona verifica un punto en terreno, cambiar verificado_en_terreno a true y registrar la fuente"
+  ]
+}

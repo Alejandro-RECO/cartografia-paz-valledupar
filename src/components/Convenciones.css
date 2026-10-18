@@ -1,0 +1,67 @@
+.convenciones {
+  position: fixed;
+  top: 7vh;
+  right: 80px;
+  z-index: 10;
+  width: 340px;
+  padding: 28px 32px;
+  rotate: 1.2deg;
+  font-size: var(--t-pequeno);
+}
+
+.convenciones h2 {
+  font-size: 36px;
+  margin-bottom: 14px;
+}
+
+.convenciones ul {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.convenciones li {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.muestra {
+  flex: none;
+  width: 56px;
+  height: 8px;
+  border-radius: 4px;
+}
+
+.muestra--rio {
+  background: var(--azul);
+}
+
+.muestra--montana {
+  height: 22px;
+  border: 3px solid var(--verde);
+  border-radius: 50%;
+}
+
+.muestra--lugar {
+  width: 28px;
+  height: 28px;
+  margin: 0 14px;
+  border: 3px solid var(--negro);
+  border-radius: 50%;
+  background: var(--hoja);
+}
+
+.muestra--recorrido {
+  background: var(--canaguate);
+  outline: 2px solid var(--negro);
+}
+
+.muestra--pendiente {
+  height: 0;
+  border-top: 4px dotted var(--negro);
+  border-radius: 0;
+}

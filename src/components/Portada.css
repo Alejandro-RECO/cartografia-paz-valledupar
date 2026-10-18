@@ -1,0 +1,52 @@
+.portada {
+  position: fixed;
+  left: 5vw;
+  bottom: 7.5vh;
+  z-index: 10;
+  width: min(820px, 44vw);
+  padding: 48px 56px 52px;
+  rotate: -0.8deg;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.portada h1 {
+  font-size: var(--t-portada);
+  line-height: 0.98;
+  letter-spacing: -0.01em;
+}
+
+.portada__lema {
+  margin: 0;
+  max-width: 30ch;
+  font-size: calc(var(--t-texto) * 1.1);
+  line-height: 1.45;
+}
+
+.portada__aviso {
+  margin: 0;
+  max-width: 44ch;
+  padding-left: 16px;
+  border-left: 4px solid var(--negro);
+  font-size: var(--t-pequeno);
+  line-height: 1.45;
+}
+
+.portada__accion {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 32px;
+}
+
+.portada__accion .boton {
+  font-size: calc(var(--t-boton) * 1.2);
+}
+
+.portada__ayuda,
+.portada__creditos {
+  margin: 0;
+  font-size: var(--t-pequeno);
+  color: var(--tierra);
+}

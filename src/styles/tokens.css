@@ -1,0 +1,38 @@
+/*
+ * Identidad visual "papelógrafo": el mapa como el pliego de un taller de cartografía social.
+ * Papel periódico, marcadores y hojas pegadas con cinta. El amarillo cañaguate marca lo ya recorrido.
+ * Los colores del mapa viven en src/styles/colores.ts (MapLibre no lee variables CSS): cambiar ambos.
+ */
+:root {
+  /* Papel */
+  --papelografo: #e9e6da; /* fondo del mapa */
+  --hoja: #f6f4ee; /* hojas pegadas sobre el mapa */
+  --cinta: rgba(227, 211, 160, 0.85); /* cinta de enmascarar */
+  --pliegue: #d6d2c3;
+
+  /* Marcadores */
+  --negro: #262420; /* texto, bordes, vías */
+  --azul: #2456a6; /* ríos, audio */
+  --verde: #2e7a4c; /* montaña, bosque */
+  --canaguate: #f2b705; /* camino recorrido, parada actual, acción principal */
+  --tierra: #6e5239; /* texto secundario */
+
+  /* Tipografía */
+  --font-mano: 'Kalam', 'Comic Sans MS', cursive; /* títulos, números, anotaciones */
+  --font-texto: 'Atkinson Hyperlegible Next Variable', system-ui, sans-serif;
+
+  /* Escala para proyector 1920×1080: 104 / 68 / 38 / 27 / 22 px */
+  --t-portada: clamp(3.5rem, 5.4vw, 6.5rem);
+  --t-titulo: clamp(2.6rem, 3.55vw, 4.25rem);
+  --t-boton: clamp(1.5rem, 1.6vw, 2rem);
+  --t-texto: clamp(1.1rem, 1.4vw, 1.7rem);
+  --t-pequeno: clamp(0.95rem, 1.15vw, 1.4rem);
+
+  /* Bordes de marcador: radios irregulares para que nada se vea hecho con regla */
+  --trazo: 3px solid var(--negro);
+  --radio-mano: 14px 20px 12px 18px;
+  --radio-circulo: 50% 46% 52% 48%;
+  --sombra-recorte: 4px 5px 0 var(--negro);
+
+  --transicion: 350ms cubic-bezier(0.22, 1, 0.36, 1);
+}

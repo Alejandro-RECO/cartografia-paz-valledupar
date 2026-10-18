@@ -1,0 +1,173 @@
+{
+  "version": "2026-10-17",
+  "definicion_masacre": "CNMH: homicidio intencional de 4 o más personas en estado de indefensión, en iguales circunstancias de modo, tiempo y lugar, con exposición pública de la violencia",
+  "rotulo_ia": "Recreación visual generada con inteligencia artificial. No es un registro del hecho.",
+  "estados_validos": ["CONFIRMADO", "CORROBORADO", "TESTIMONIO_ATRIBUIDO", "CONTROVERTIDO", "NO_VERIFICADO"],
+  "paradas": [
+    {
+      "id": "V-02",
+      "orden": 1,
+      "slug": "via-mariangola-1996",
+      "titulo": "La vía de Mariangola",
+      "fecha": { "valor": "1996-11-22", "precision": "aproximada", "estado": "CONTROVERTIDO", "nota": "El Tiempo (1996) indica la noche del viernes; El Tiempo (1997) dice 24 de noviembre" },
+      "lugar": { "municipio": "Valledupar", "departamento": "Cesar", "corregimiento": "Mariangola", "referencia": "Vivienda sobre la vía Mariangola–Valledupar; cuerpos a unos 2 km, cerca de un puente", "ambito": "rural", "coordenadas": null, "precision": "corregimiento" },
+      "victimas_mortales": { "cifra": 7, "estado": "CONTROVERTIDO", "alternativas": [{ "cifra": 8, "fuente": "F12" }] },
+      "victimas": [
+        { "nombre": "Hipólito González Calderón", "detalle": "Conductor, 57 años" },
+        { "nombre": "Rafael", "detalle": "Hijo de Hipólito González Calderón; apellidos no publicados" },
+        { "nombre": "Hipólito", "detalle": "Hijo de Hipólito González Calderón; apellidos no publicados" },
+        { "nombre": "Raumith", "detalle": "Hijo de Hipólito González Calderón; apellidos no publicados" },
+        { "nombre": "Luis Carlos Guerrero", "detalle": null },
+        { "nombre": "Jorge Jiménez Miranda", "detalle": null },
+        { "nombre": "Marcos Rafael Montes", "detalle": null }
+      ],
+      "actores": { "texto": "Hombres armados, al parecer de autodefensas, según la prensa de la época", "estado": "NO_VERIFICADO" },
+      "estado_judicial": "Sin información pública",
+      "texto_parada": "Hacia las once de la noche, hombres armados derribaron la puerta de una casa sobre la vía que une Mariangola con Valledupar. Se llevaron al dueño, un conductor de 57 años, y a tres de sus hijos. Amenazaron con matar a la madre si alguno escapaba. Ella y su hija salieron a pedir ayuda, pero nadie abrió la puerta. Tras los disparos, los vecinos encontraron siete cuerpos boca abajo cerca de un puente, a unos dos kilómetros. Ese fin de semana, presuntas autodefensas asesinaron a más de treinta personas en Antioquia, Cesar y Magdalena, acusándolas de colaborar con la guerrilla. Al año siguiente, la prensa recordaría esta noche como la primera incursión paramilitar en Mariangola.",
+      "testimonios": [{ "persona": "Mirian Ardila Ortega", "relacion": "Esposa y madre de cuatro víctimas; testigo presencial", "fuente": "F11", "estado": "TESTIMONIO_ATRIBUIDO" }],
+      "fotografias": [],
+      "audiovisual": [],
+      "imagen_ia": { "prompt_ref": "Parte V · V-02", "tipo": "paisaje sin personas" },
+      "fuentes": ["F11", "F12"],
+      "advertencias": ["Podría ser el mismo hecho que la URT fecha el 11 nov. 1995", "No atribuir a una estructura concreta"]
+    },
+    {
+      "id": "V-03",
+      "orden": 2,
+      "slug": "mariangola-1997",
+      "titulo": "La lista de Mariangola",
+      "fecha": { "valor": "1997-09", "precision": "mes", "estado": "NO_VERIFICADO", "nota": "Madrugada en los días previos al 25 sep. 1997; día exacto desconocido" },
+      "lugar": { "municipio": "Valledupar", "departamento": "Cesar", "corregimiento": "Mariangola", "referencia": "Viviendas del corregimiento; cuerpos cerca del puente sobre la vía a Valledupar", "ambito": "rural", "coordenadas": null, "precision": "corregimiento" },
+      "victimas_mortales": { "cifra": 4, "estado": "CORROBORADO", "alternativas": [] },
+      "victimas": [
+        { "nombre": "Miguel Maestre Villazón", "detalle": "53 años, cultivador de pan coger" },
+        { "nombre": "Fabio Morales", "detalle": "Presidente de la junta de acción comunal de la vereda Gallineta" },
+        { "nombre": "Alexander Salas", "detalle": "Llegó de Pivijay (Magdalena) para la cosecha de café" },
+        { "nombre": "Juan Carlos Gutiérrez", "detalle": "Llegó de Pivijay (Magdalena) para la cosecha de café" }
+      ],
+      "actores": { "texto": "Grupo de las autodefensas, según la Policía", "estado": "NO_VERIFICADO" },
+      "estado_judicial": "Sin información pública",
+      "texto_parada": "A las dos de la madrugada, un grupo con ropa militar y civil recorrió Mariangola derribando puertas. Llevaba una lista. De cuatro casas sacó a cuatro hombres; en una dijeron buscar armas y solo encontraron un machete. Los cuatro aparecieron muertos cerca del puente sobre la vía a Valledupar. La Policía atribuyó el ataque a las autodefensas y la prensa lo llamó su segunda incursión en el corregimiento. Entre las víctimas estaban dos campesinos de pan coger y dos jóvenes que habían llegado de Pivijay para la cosecha de café.",
+      "testimonios": [{ "persona": "Arelis Maestre", "relacion": "Sobrina de Miguel Maestre Villazón; testigo presencial", "fuente": "F12", "estado": "TESTIMONIO_ATRIBUIDO" }],
+      "fotografias": [],
+      "audiovisual": [],
+      "imagen_ia": { "prompt_ref": "Parte V · V-03", "tipo": "calle nocturna sin personas" },
+      "fuentes": ["F12"],
+      "advertencias": ["Fuente única", "No sugerir parentesco con la víctima «Villazón» de El Diluvio"]
+    },
+    {
+      "id": "V-04",
+      "orden": 3,
+      "slug": "el-diluvio-1998",
+      "titulo": "El Diluvio",
+      "fecha": { "valor": "1998-06-21", "precision": "dia", "estado": "CORROBORADO", "nota": "Deducida: domingo electoral anterior al 25 jun. 1998 (segunda vuelta presidencial)" },
+      "lugar": { "municipio": "Valledupar", "departamento": "Cesar", "corregimiento": "Mariangola", "referencia": "Selección en una escuela de Villa Germania; asesinatos en la vereda El Diluvio, parte alta de la Sierra Nevada", "ambito": "rural", "coordenadas": null, "precision": "vereda" },
+      "victimas_mortales": { "cifra": 8, "estado": "CORROBORADO", "alternativas": [] },
+      "victimas": [
+        { "nombre": "Carmen Antonio Duarte Rojas", "detalle": "Muerte confirmada por la Policía" },
+        { "nombre": "Cilia Yaneth Restrepo Cuta", "detalle": "Profesora, según su tía" },
+        { "nombre": "Jorge Villalba", "detalle": null },
+        { "nombre": "Mario de la Torre", "detalle": null },
+        { "nombre": "Francisco Pabón", "detalle": null },
+        { "nombre": "Persona de apellido Villazón", "detalle": "Nombre completo desconocido" },
+        { "nombre": "Sin identificar", "detalle": null },
+        { "nombre": "Sin identificar", "detalle": null }
+      ],
+      "actores": { "texto": "Unos 60 paramilitares con uniformes de uso privativo del Ejército, según la prensa; estructura no identificada", "estado": "CORROBORADO" },
+      "estado_judicial": "Sin información pública",
+      "texto_parada": "Era el día de la segunda vuelta presidencial. Unos sesenta hombres con uniformes de uso privativo del Ejército llegaron a Villa Germania y reunieron en la escuela a quienes iban a votar. Escogieron a quienes, según ellos, tenían problemas, y dejaron ir al resto. Al cerrar la votación subieron a El Diluvio, en la parte alta de la Sierra, y allí mataron a ocho personas con arma blanca. Antes de irse prohibieron bajar a Mariangola a avisar. Días después, las familias aún no sabían si podían subir a recoger los cuerpos.",
+      "testimonios": [
+        { "persona": "Gloria Cuta Beltrán", "relacion": "Tía de Cilia Yaneth Restrepo Cuta", "fuente": "F13", "estado": "TESTIMONIO_ATRIBUIDO" },
+        { "persona": "Vocero de la Cruz Roja Colombiana", "relacion": "Verificador en terreno", "fuente": "F13", "estado": "CORROBORADO" }
+      ],
+      "fotografias": [],
+      "audiovisual": [],
+      "imagen_ia": { "prompt_ref": "Parte V · V-04", "tipo": "escuela rural vacía" },
+      "fuentes": ["F13", "F10"],
+      "advertencias": ["No atribuir al Frente Mártires del Valle de Upar (creado en 2001)", "No mostrar armas blancas en imágenes"]
+    },
+    {
+      "id": "V-06",
+      "orden": 4,
+      "slug": "bello-horizonte-2001",
+      "titulo": "Bello Horizonte y Futuro de los Niños",
+      "fecha": { "valor": "2001-01-13", "precision": "dia", "estado": "CORROBORADO", "nota": "Entre las 21:00 y las 23:30" },
+      "lugar": { "municipio": "Valledupar", "departamento": "Cesar", "corregimiento": null, "referencia": "Barrios de invasión El Futuro de los Niños (manzana 6) y Bello Horizonte (manzana 26 o 21), noroccidente de la ciudad", "ambito": "urbano", "coordenadas": null, "precision": "barrio" },
+      "victimas_mortales": { "cifra": 8, "estado": "CORROBORADO", "alternativas": [] },
+      "victimas": [
+        { "nombre": "Ovier Salgado Tapias", "variantes": ["Ovier Salgado"], "detalle": "Futuro de los Niños" },
+        { "nombre": "Alex Salgado Tapias", "variantes": ["Alex Salgado"], "detalle": "Futuro de los Niños" },
+        { "nombre": "Iván Mercado Tapias", "variantes": ["Iván Mercado Barrios"], "detalle": "Futuro de los Niños" },
+        { "nombre": "Dina Luz Morales Martínez", "detalle": "Bello Horizonte" },
+        { "nombre": "Santiago Silvestre Molina Gómez", "detalle": "Bello Horizonte" },
+        { "nombre": "Nangel Rafael Pacheco Montero", "detalle": "Bello Horizonte" },
+        { "nombre": "Luis Enrique Pájaro", "detalle": "Bello Horizonte" },
+        { "nombre": "Orlando José Rivero Yance", "variantes": ["Orlando José Yance Rivero"], "detalle": "Bello Horizonte" }
+      ],
+      "actores": { "texto": "Paramilitares de las AUC, según el banco de datos del CINEP", "estado": "CORROBORADO" },
+      "estado_judicial": "Sin información pública",
+      "texto_parada": "Hacia las nueve de la noche, unos cuarenta hombres con prendas militares llegaron en camionetas y motos a dos barrios de invasión habitados en su mayoría por familias desplazadas. Patrullaron durante cerca de dos horas. En El Futuro de los Niños entraron a la casa de la familia Salgado, que tres años antes había huido de la violencia en Corozal. En Bello Horizonte atacaron a un grupo que departía a la entrada de una casa. Ocho personas murieron y varias quedaron heridas. Al irse, lanzaron una granada. Fue la violencia de la que muchos habían huido, alcanzándolos en la ciudad.",
+      "testimonios": [
+        { "persona": "María Dolores Tapias", "relacion": "Madre de Ovier y Alex Salgado Tapias", "fuente": "F14", "estado": "TESTIMONIO_ATRIBUIDO" }
+      ],
+      "fotografias": [{ "descripcion": "Emilse Salgado Tapias a la entrada de la morgue", "fuente": "F14", "estado": "NO_LOCALIZADA", "uso": "No usar sin obtener el original y la autorización de El Tiempo" }],
+      "audiovisual": [],
+      "imagen_ia": { "prompt_ref": "Parte V · V-06", "tipo": "calle de barrio sin personas" },
+      "fuentes": ["F14", "F6"],
+      "advertencias": ["Número de heridos controvertido", "Evitar estética de miseria"]
+    },
+    {
+      "id": "V-07",
+      "orden": 5,
+      "slug": "atanquez-2002",
+      "titulo": "Atánquez",
+      "fecha": { "valor": "2002-12-08", "precision": "dia", "estado": "CONFIRMADO", "nota": "Domingo de mercado, al amanecer" },
+      "lugar": { "municipio": "Valledupar", "departamento": "Cesar", "corregimiento": "Atánquez", "referencia": "Plaza de mercado de Atánquez, resguardo kankuamo, Sierra Nevada; a 41 km de Valledupar", "ambito": "rural indígena", "coordenadas": null, "precision": "corregimiento" },
+      "victimas_mortales": { "cifra": 4, "estado": "CONFIRMADO", "alternativas": [] },
+      "victimas": [
+        { "nombre": "Abel Alvarado Maestre", "variantes": ["Abel Francisco Alvarado Maestre", "mamo Abelancho"], "detalle": "Mamo del cabildo kankuamo" },
+        { "nombre": "Alfredo Antonio Borrego", "detalle": "Agricultor" },
+        { "nombre": "José Manuel Cáceres", "variantes": ["José Manuel Cáceres Rodríguez"], "detalle": "Labriego" },
+        { "nombre": "Franklin Manuel Arias Arias", "detalle": "Agricultor; iba con su esposa y sus dos hijos" }
+      ],
+      "actores": { "texto": "Unos 60 hombres de las AUC (Bloque Norte), según la Corte Suprema", "estado": "CONFIRMADO" },
+      "estado_judicial": "Mario José y Geiber José Fuentes Montaño, condenados a 40 años (Corte Suprema, 27 ene. 2010). Hermes de Jesús Nevado Cantillo, condenado en 2022. Walter David Mejía Carrillo, capturado en 2024. La Corte ordenó investigar a alias «El Paisa» y a Rodrigo Tovar Pupo",
+      "texto_parada": "Al amanecer de un domingo de mercado, unos sesenta hombres de las Autodefensas Unidas de Colombia rodearon Atánquez. En la plaza pidieron documentos a personas señaladas por encapuchados. Separaron al mamo del cabildo, a un profesor y a un agricultor; el agricultor suplicó y lo mataron allí mismo. Cerca del mercado mataron a otro hombre. Al resto los sacaron atados del pueblo. El profesor fue liberado, pero un agricultor retenido mientras iba con su esposa y sus hijos apareció muerto horas después. Al mediodía hallaron el cuerpo del mamo en la vía antigua hacia Valledupar. La Corte Suprema estableció que los mataron por señalarlos como colaboradores de la guerrilla.",
+      "testimonios": [
+        { "persona": "Nevid Enrique Carrillo Martínez", "relacion": "Corregidor; testigo desde la plaza", "fuente": "F1", "estado": "CONFIRMADO" },
+        { "persona": "Eugenes Elías Oñate Arias", "relacion": "Comerciante; testigo", "fuente": "F1", "estado": "CONFIRMADO" },
+        { "persona": "Gustavo Horacio Maestre Arias", "relacion": "Retenido y liberado", "fuente": "F1", "estado": "CONFIRMADO" },
+        { "persona": "Atter Alvarado", "relacion": "Hijo del mamo", "fuente": "F1", "estado": "CONFIRMADO" }
+      ],
+      "fotografias": [],
+      "audiovisual": [],
+      "imagen_ia": { "prompt_ref": "Parte V · V-07", "tipo": "plaza de montaña vacía, sin elementos sagrados" },
+      "fuentes": ["F1", "F7", "F2", "F15", "F16"],
+      "advertencias": ["No representar objetos sagrados ni autoridades espirituales sin consentimiento del pueblo kankuamo", "Fecha del fallo del Tribunal controvertida (2007 o 2008)"]
+    },
+    {
+      "id": "V-08",
+      "orden": 6,
+      "slug": "caracoli-2024",
+      "titulo": "Caracolí",
+      "fecha": { "valor": "2024-08-13", "precision": "dia", "estado": "CORROBORADO", "nota": "Hacia las 18:30; El Heraldo indica 14 de agosto" },
+      "lugar": { "municipio": "Valledupar", "departamento": "Cesar", "corregimiento": "Caracolí", "referencia": "Vivienda en zona de invasión a unos 150 m de la cabecera del corregimiento; límite con Bosconia", "ambito": "rural", "coordenadas": null, "precision": "corregimiento" },
+      "victimas_mortales": { "cifra": 4, "estado": "CORROBORADO", "alternativas": [] },
+      "victimas": [
+        { "nombre": "Luis Miguel Támara Castillo", "detalle": null },
+        { "nombre": "Jaison Javier Aragón", "detalle": "22 años" },
+        { "nombre": "Jader Pertuz", "variantes": ["Jader Pertuz Murillo"], "detalle": "25 años" },
+        { "nombre": "Yulieth Morillo López", "variantes": ["Yulibeth Morillo López"], "detalle": null }
+      ],
+      "actores": { "texto": "Hombres armados en motocicleta; autoría no establecida", "estado": "NO_VERIFICADO" },
+      "estado_judicial": "Sin capturas conocidas a octubre de 2026",
+      "texto_parada": "Hacia las seis y media de la tarde, hombres en motocicleta llegaron a una vivienda en un asentamiento informal de Caracolí, a pocos metros del caserío. Uno entró y disparó. Murieron tres hombres y una mujer. Días antes habían circulado panfletos con amenazas contra líderes comunales del sur del municipio. Las autoridades ofrecieron recompensa y plantearon como hipótesis inicial una disputa por el microtráfico, sin establecer responsables. La masacre mostró que, veinte años después de la desmovilización paramilitar, la violencia armada seguía presente en los mismos corregimientos.",
+      "testimonios": [],
+      "fotografias": [],
+      "audiovisual": [],
+      "imagen_ia": { "prompt_ref": "Parte V · V-08", "tipo": "borde de caserío sin personas" },
+      "fuentes": ["F17", "F18", "F19", "F20", "F21"],
+      "advertencias": ["No mostrar apodos ni actividades atribuidas a las víctimas", "No atribuir al Clan del Golfo", "Caso más discutible frente a la definición del CNMH"]
+    }
+  ]
+}

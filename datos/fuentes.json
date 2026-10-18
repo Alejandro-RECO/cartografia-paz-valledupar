@@ -1,0 +1,26 @@
+{
+  "fuentes": {
+    "F1": { "titulo": "Corte Suprema de Justicia, Casación 29753", "fecha": "2010-01-27", "tipo": "judicial", "url": "https://www.justiciaypazcolombia.com/wp-content/uploads/2010/01/condena_por_masacre_de_kankuamos.pdf" },
+    "F2": { "titulo": "Corte IDH, medidas provisionales para el pueblo kankuamo", "fecha": "2004-07-05", "tipo": "internacional", "url": "https://hrlibrary.umn.edu/iachr/Espan/Skankuamo7-5-04.html" },
+    "F4": { "titulo": "URT vía AgroNET: campesinos restituidos en Mariangola", "fecha": "2017-11-14", "tipo": "estatal", "url": "https://agronet.gov.co/noticias/en-zona-rural-de-valledupar-los-campesinos-restituidos-estan-transformando-sus-tierras-14" },
+    "F5": { "titulo": "URT: familia restituida en Mariangola", "fecha": null, "tipo": "estatal", "url": "https://www.urt.gov.co/sala-de-prensa/en-zona-rural-de-valledupar-familia-restituida-transformara-su-predio-con-proyecto-de-ganaderia" },
+    "F6": { "titulo": "CINEP, Noche y Niebla n.º 19", "fecha": "2001", "tipo": "banco de datos DD. HH.", "url": "https://www.cinep.org.co/publi-files/PDFS/20010301.nocheyniebla19.pdf" },
+    "F7": { "titulo": "Rutas del Conflicto, Masacre de Kankuamos", "fecha": null, "tipo": "periodismo de datos", "url": "https://rutasdelconflicto.com/masacres/kankuamos" },
+    "F10": { "titulo": "PDBA Georgetown, elecciones de 1998, segunda vuelta", "fecha": null, "tipo": "auxiliar", "url": "https://pdba.georgetown.edu/Elecdata/Col/pres98_2.html" },
+    "F11": { "titulo": "El Tiempo, «El miedo gana terreno en el norte del país»", "fecha": "1996-11-25", "tipo": "prensa", "url": "https://www.eltiempo.com/archivo/documento/MAM-600633" },
+    "F12": { "titulo": "El Tiempo, «La muerte llegó a Mariangola»", "fecha": "1997-09-25", "tipo": "prensa", "url": "https://www.eltiempo.com/archivo/documento/MAM-709869" },
+    "F13": { "titulo": "El Tiempo, «Cruz Roja confirma masacre en Cesar»", "fecha": "1998-06-25", "tipo": "prensa", "url": "https://www.eltiempo.com/archivo/documento/MAM-805357" },
+    "F14": { "titulo": "El Tiempo, «Masacre en Valledupar»", "fecha": "2001-01-15", "tipo": "prensa", "url": "https://www.eltiempo.com/archivo/documento/MAM-649579" },
+    "F15": { "titulo": "Infobae, condena a Hermes de Jesús Nevado Cantillo", "fecha": "2022-03-21", "tipo": "prensa", "url": "https://www.infobae.com/en/2022/03/21/former-paramilitary-convicted-for-murder-of-indigenous-man-of-kankuamo-cabildo" },
+    "F16": { "titulo": "Infobae, captura de Walter David Mejía Carrillo", "fecha": "2024-04-06", "tipo": "prensa", "url": "https://www.infobae.com/colombia/2024/04/06/detienen-en-valledupar-a-sospechoso-por-el-asesinato-de-miembros-de-la-comunidad-kankuamo-en-2002/" },
+    "F17": { "titulo": "Blu Radio, masacre en Caracolí", "fecha": "2024-08", "tipo": "prensa", "url": "https://www.bluradio.com/regiones/caribe/masacre-en-corregimiento-de-valledupar-estaria-ligada-a-guerra-por-microtrafico-rg10" },
+    "F18": { "titulo": "Noticias RCN, masacre en Caracolí", "fecha": "2024-08-14", "tipo": "prensa", "url": "https://www.noticiasrcn.com/colombia/masacre-en-caracoli-deja-cuatro-personas-muertas-que-se-sabe-734216" },
+    "F19": { "titulo": "El Colombiano, masacre en zona rural de Valledupar", "fecha": "2024-08-13", "tipo": "prensa", "url": "https://www.elcolombiano.com/colombia/masacre-zona-rural-valledupar-OE25215812" },
+    "F20": { "titulo": "El Heraldo, «El duro actuar del Clan del Golfo en Valledupar»", "fecha": "2024-08-18", "tipo": "prensa", "url": "https://www.elheraldo.co/cesar/2024/08/18/el-duro-actuar-del-clan-del-golfo-en-valledupar-1118489/" },
+    "F21": { "titulo": "El Espectador, «Lo que se sabe de la masacre en Valledupar»", "fecha": "2024-08", "tipo": "prensa", "url": "https://www.elespectador.com/colombia/mas-regiones/lo-que-se-sabe-de-la-masacre-en-valledupar/" },
+    "F22": { "titulo": "Semana, autoridades desmienten masacre en Villa Germania", "fecha": "2025-07", "tipo": "prensa", "url": "https://www.semana.com/nacion/valledupar/articulo/autoridades-desmienten-masacre-en-valledupar-donde-se-habia-reportado-seis-personas-asesinadas-clan-del-golfo-habria-realizado-un-montaje/202545/" },
+    "F23": { "titulo": "Infobae, «No fue una masacre»", "fecha": "2025-07-20", "tipo": "prensa", "url": "https://www.infobae.com/colombia/2025/07/20/no-fue-una-masacre-hombres-que-aparecieron-amarrados-en-valledupar-aclararon-la-situacion-un-despiste-contra-el-enemigo/" },
+    "F24": { "titulo": "El Heraldo, ONU hace seguimiento a asesinatos en Nando Marín", "fecha": "2026-06-16", "tipo": "prensa", "url": "https://www.elheraldo.co/cesar/2026/06/16/onu-hace-seguimiento-a-asesinatos-en-nando-marin/" },
+    "F26": { "titulo": "El Heraldo, triple homicidio en zona rural de Valledupar", "fecha": "2026-09-20", "tipo": "prensa", "url": "https://www.elheraldo.co/colombia/2026/09/20/triple-homicidio-en-zona-rural-de-valledupar-victimas-fueron-asesinadas-en-dos-corregimientos/" }
+  }
+}

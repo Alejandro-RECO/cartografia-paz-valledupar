@@ -1,0 +1,9 @@
+{
+  "excluidos": [
+    { "id": "V-01", "hecho": "Masacre de Mariangola del 11 nov. 1995", "motivo": "Posible duplicado mal fechado de V-02; solo hay notas derivadas de la URT", "estado": "CONTROVERTIDO", "fuentes": ["F4", "F5"] },
+    { "id": "V-05", "hecho": "Cinco recicladores asesinados en La Nevada, 29 nov. 2000", "motivo": "Una sola mención secundaria; falta un relato propio", "estado": "NO_VERIFICADO", "fuentes": ["F14"] },
+    { "id": "X-01", "hecho": "Presunta masacre de Villa Germania, 18 jul. 2025", "motivo": "Las autoridades confirmaron un solo cuerpo; un video mostró vivos a varios presuntos asesinados", "estado": "CONTROVERTIDO", "fuentes": ["F22", "F23"] },
+    { "id": "X-02", "hecho": "Cuatro jóvenes muertos en Nando Marín, 2 may. 2026", "motivo": "Ocurrió durante un procedimiento policial; la indefensión está en disputa; caso en seguimiento por ONU Derechos Humanos", "estado": "CONTROVERTIDO", "fuentes": ["F24"] },
+    { "id": "X-03", "hecho": "Triple homicidio en Los Venados y El Perro, 20 sep. 2026", "motivo": "Tres víctimas en dos lugares: no cumple la definición", "estado": "EXCLUIDO_POR_DEFINICION", "fuentes": ["F26"] }
+  ]
+}

@@ -1,0 +1,118 @@
+.mapa {
+  position: fixed;
+  inset: 0;
+}
+
+/* Marcador: uno o varios círculos en el mismo punto (V-02 y V-03 comparten Mariangola) */
+.marcador {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+
+.marcador--activo {
+  z-index: 2;
+}
+
+.marcador__circulos {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+/* Por visitar = blanco, visitada = cañaguate, actual = más grande con halo */
+.marcador__circulo {
+  display: grid;
+  place-items: center;
+  width: 56px;
+  height: 56px;
+  padding: 0;
+  border: var(--trazo);
+  border-radius: var(--radio-circulo);
+  background: var(--hoja);
+  font-family: var(--font-mano);
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 1;
+  transition:
+    width var(--transicion),
+    height var(--transicion),
+    font-size var(--transicion),
+    background var(--transicion);
+}
+
+.marcador__circulo--visitado {
+  background: var(--canaguate);
+}
+
+.marcador__circulo--actual {
+  width: 88px;
+  height: 88px;
+  border-width: 4px;
+  background: var(--canaguate);
+  font-size: 48px;
+  box-shadow:
+    0 0 0 9px rgba(242, 183, 5, 0.35),
+    0 0 0 12px var(--negro);
+}
+
+/* «(ubicación aproximada)»: nota a mano sobre una tira de papel */
+.marcador__etiqueta {
+  max-width: 340px;
+  padding: 2px 12px 4px;
+  background: var(--hoja);
+  border: 2px solid var(--negro);
+  border-radius: 4px;
+  font-family: var(--font-mano);
+  font-size: 22px;
+  line-height: 1.2;
+  text-align: center;
+}
+
+.marcador__etiqueta:empty {
+  display: none;
+}
+
+/* Rótulos a mano sobre el mapa */
+.anotacion {
+  font-family: var(--font-mano);
+  white-space: nowrap;
+  pointer-events: none;
+  text-shadow:
+    0 0 4px var(--papelografo),
+    0 0 8px var(--papelografo);
+}
+
+.anotacion__texto {
+  display: block;
+}
+
+.mapa--lejos .anotacion--agua {
+  display: none;
+}
+
+.mapa--lejos .anotacion--ciudad {
+  font-size: 36px;
+}
+
+.anotacion--ciudad {
+  font-size: 56px;
+  font-weight: 700;
+  color: var(--negro);
+}
+
+.anotacion--montana {
+  font-size: 32px;
+  color: var(--verde);
+}
+
+.anotacion--agua {
+  font-size: 28px;
+  color: var(--azul);
+}
+
+.maplibregl-ctrl-attrib {
+  font-family: var(--font-texto);
+  font-size: 0.75rem;
+}
