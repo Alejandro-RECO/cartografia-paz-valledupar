@@ -2,6 +2,8 @@
 
 Recorrido web guiado en 3D por seis masacres documentadas en Valledupar (Cesar), 1996–2024, con estilo de cartografía social. Proyecto de Cátedra de Paz.
 
+**Sitio publicado:** https://alejandro-reco.github.io/cartografia-paz-valledupar/ (se actualiza solo en cada push a `main`).
+
 ## Comandos
 
 ```bash
