@@ -2,16 +2,10 @@ import { useEffect, useRef } from 'react'
 import * as maplibregl from 'maplibre-gl'
 import 'maplibre-gl/dist/maplibre-gl.css'
 import urlWorker from 'maplibre-gl/dist/maplibre-gl-worker.mjs?worker&url'
-import {
-  CAMARA_GENERAL,
-  CAMARA_PARADA,
-  DURACION_VUELO,
-  LIMITES,
-  MARGEN_PARADA,
-  MARGEN_PORTADA,
-} from '../config/map'
+import { CAMARA_GENERAL, CAMARA_PARADA, DURACION_VUELO, LIMITES } from '../config/map'
 import { anotaciones } from '../data/anotaciones'
 import { estiloPapelografo } from '../map/estiloPapelografo'
+import { margenLibre } from '../map/margenes'
 import { construirRuta, gradienteHasta } from '../map/ruta'
 import { COLORES } from '../styles/colores'
 import type { LngLat, Parada } from '../types'
@@ -49,6 +43,37 @@ export function MapaValledupar({ paradas, indice, onSeleccionar }: Props) {
   const etiquetas = useRef<{ el: HTMLElement; indices: number[] }[]>([])
   const progreso = useRef(0)
   const primerVuelo = useRef(true)
+  const indiceActual = useRef(indice)
+
+  /** Lleva la cámara a la parada actual (o a la vista general) dentro de la zona que no tapan las hojas. */
+  const encuadrar = (duracion: number) => {
+    const m = mapa.current
+    if (!m) return
+    const margen = margenLibre()
+    const parada = paradas[indiceActual.current]
+    if (parada?.coordenadas) {
+      m.flyTo({
+        center: parada.coordenadas,
+        ...CAMARA_PARADA,
+        padding: margen,
+        duration: duracion,
+        curve: 1.5,
+      })
+      return
+    }
+    const limites = new maplibregl.LngLatBounds()
+    ubicadas.current.forEach(({ p }) => limites.extend(p.coordenadas!))
+    // cameraForBounds calcula el zoom sin inclinación; con la cámara inclinada hace falta alejar un poco más
+    const camara = m.cameraForBounds(limites, { padding: margen, bearing: CAMARA_GENERAL.bearing })
+    m.flyTo({
+      center: limites.getCenter(),
+      zoom: (camara?.zoom ?? 9) - 0.4,
+      ...CAMARA_GENERAL,
+      padding: margen, // el centro queda en la zona libre de hojas
+      duration: duracion,
+      curve: 1.5,
+    })
+  }
 
   // Ruta solo entre paradas con ubicación; cada parada sabe en qué punto de la ruta está
   const ubicadas = useRef(paradas.map((p, i) => ({ p, i })).filter(({ p }) => p.coordenadas))
@@ -152,31 +177,8 @@ export function MapaValledupar({ paradas, indice, onSeleccionar }: Props) {
       el.closest('.marcador')?.classList.toggle('marcador--activo', activo)
     }
 
-    const parada = paradas[indice]
-    const duracion = quieto ? 0 : DURACION_VUELO
-    if (parada?.coordenadas) {
-      m.flyTo({
-        center: parada.coordenadas,
-        ...CAMARA_PARADA,
-        padding: MARGEN_PARADA,
-        duration: duracion,
-        curve: 1.5,
-      })
-    } else {
-      const limites = new maplibregl.LngLatBounds()
-      ubicadas.current.forEach(({ p }) => limites.extend(p.coordenadas!))
-      const margen = parada ? MARGEN_PARADA : MARGEN_PORTADA
-      // cameraForBounds calcula el zoom sin inclinación; con la cámara inclinada hace falta alejar un poco más
-      const camara = m.cameraForBounds(limites, { padding: margen, bearing: CAMARA_GENERAL.bearing })
-      m.flyTo({
-        center: limites.getCenter(),
-        zoom: (camara?.zoom ?? 9) - 0.4,
-        ...CAMARA_GENERAL,
-        padding: margen, // el centro queda en la zona libre de hojas
-        duration: duracion,
-        curve: 1.5,
-      })
-    }
+    indiceActual.current = indice
+    encuadrar(quieto ? 0 : DURACION_VUELO)
 
     const desde = progreso.current
     const hasta = progresoDeParada(indice)
@@ -205,6 +207,21 @@ export function MapaValledupar({ paradas, indice, onSeleccionar }: Props) {
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [indice, paradas])
+
+  // Al cambiar el tamaño de la ventana (o girar la tablet) se vuelve a encuadrar sin animación
+  useEffect(() => {
+    let espera = 0
+    const alCambiar = () => {
+      clearTimeout(espera)
+      espera = window.setTimeout(() => encuadrar(0), 250)
+    }
+    window.addEventListener('resize', alCambiar)
+    return () => {
+      clearTimeout(espera)
+      window.removeEventListener('resize', alCambiar)
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [])
 
   return <div ref={contenedor} className="mapa" />
 }

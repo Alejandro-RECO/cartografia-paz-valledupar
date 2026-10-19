@@ -1,23 +1,23 @@
 .convenciones {
   position: fixed;
-  top: 7vh;
-  right: 80px;
+  top: var(--m);
+  right: var(--m);
   z-index: 10;
-  width: 340px;
-  padding: 28px 32px;
+  width: clamp(220px, calc(var(--e) * 17.7), 340px);
+  padding: clamp(14px, calc(var(--e) * 1.45), 28px) clamp(16px, calc(var(--e) * 1.65), 32px);
   rotate: 1.2deg;
   font-size: var(--t-pequeno);
 }
 
 .convenciones h2 {
-  font-size: 36px;
-  margin-bottom: 14px;
+  font-size: clamp(20px, calc(var(--e) * 1.9), 36px);
+  margin-bottom: calc(var(--hueco) * 0.7);
 }
 
 .convenciones ul {
   display: flex;
   flex-direction: column;
-  gap: 14px;
+  gap: calc(var(--hueco) * 0.7);
   margin: 0;
   padding: 0;
   list-style: none;
@@ -26,12 +26,14 @@
 .convenciones li {
   display: flex;
   align-items: center;
-  gap: 16px;
+  gap: calc(var(--hueco) * 0.8);
+  line-height: 1.3;
 }
 
 .muestra {
+  --ancho-muestra: clamp(30px, calc(var(--e) * 2.9), 56px);
   flex: none;
-  width: 56px;
+  width: var(--ancho-muestra);
   height: 8px;
   border-radius: 4px;
 }
@@ -41,15 +43,15 @@
 }
 
 .muestra--montana {
-  height: 22px;
+  height: calc(var(--ancho-muestra) * 0.4);
   border: 3px solid var(--verde);
   border-radius: 50%;
 }
 
 .muestra--lugar {
-  width: 28px;
-  height: 28px;
-  margin: 0 14px;
+  width: calc(var(--ancho-muestra) * 0.5);
+  height: calc(var(--ancho-muestra) * 0.5);
+  margin: 0 calc(var(--ancho-muestra) * 0.25);
   border: 3px solid var(--negro);
   border-radius: 50%;
   background: var(--hoja);
@@ -64,4 +66,17 @@
   height: 0;
   border-top: 4px dotted var(--negro);
   border-radius: 0;
+}
+
+/* Vertical: convenciones en dos columnas arriba, para dejar ver el mapa */
+@media (max-aspect-ratio: 1 / 1), (max-width: 900px) {
+  .convenciones {
+    left: var(--m);
+    width: auto;
+  }
+
+  .convenciones ul {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 }

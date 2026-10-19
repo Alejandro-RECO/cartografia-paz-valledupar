@@ -1,29 +1,35 @@
 /* Guía auditiva: queda fija arriba de la tarjeta mientras se hace scroll */
 .guia {
   position: sticky;
-  top: -48px; /* compensa el padding superior de .panel__contenido */
+  top: calc(var(--pad-hoja) * -1); /* compensa el padding superior de .panel__contenido */
   z-index: 2;
   flex: none;
   display: flex;
   align-items: center;
-  gap: 16px;
-  margin: -48px -52px 0;
-  padding: 16px 52px;
+  gap: calc(var(--hueco) * 0.8);
+  margin: calc(var(--pad-hoja) * -1) calc(var(--pad-hoja) * -1) 0;
+  padding: clamp(10px, calc(var(--e) * 0.8), 16px) var(--pad-hoja);
   background: var(--hoja);
   border-bottom: 2px dashed var(--negro);
 }
 
 .guia__boton {
+  --boton: clamp(40px, calc(var(--e) * 2.9), 56px);
   flex: none;
   display: grid;
   place-items: center;
-  width: 56px;
-  height: 56px;
+  width: var(--boton);
+  height: var(--boton);
   padding: 0;
   border: var(--trazo);
   border-radius: 50%;
   background: var(--azul);
   color: var(--hoja);
+}
+
+.guia__boton svg {
+  width: 45%;
+  height: 45%;
 }
 
 .guia__cuerpo {
@@ -35,10 +41,13 @@
 }
 
 .guia__titulo {
+  overflow: hidden;
   font-family: var(--font-mano);
   font-size: var(--t-boton);
   font-weight: 700;
-  line-height: 1;
+  line-height: 1.1;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
 .guia__tiempo {

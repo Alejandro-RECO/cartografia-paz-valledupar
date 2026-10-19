@@ -1,16 +1,26 @@
+/* La navegación ocupa solo el espacio que deja libre el panel de la parada */
 .navegacion {
   position: fixed;
-  left: 72px;
-  bottom: 56px;
+  left: var(--m);
+  bottom: var(--m);
   z-index: 10;
+  max-width: calc(100vw - var(--ancho-panel) - 3 * var(--m));
   display: flex;
   align-items: center;
-  gap: 28px;
-  padding: 16px 20px;
+  gap: var(--hueco);
+  padding: calc(var(--hueco) * 0.75) var(--hueco);
   rotate: -0.6deg;
 }
 
+.navegacion .boton {
+  flex: none;
+  white-space: nowrap;
+}
+
+/* La miniatura de la ruta se encoge (tramos más cortos) antes que los botones */
 .navegacion__ruta {
+  flex: 1 1 auto;
+  min-width: 0;
   display: flex;
   align-items: center;
   margin: 0;
@@ -22,11 +32,19 @@
 .tramo {
   display: flex;
   align-items: center;
+  min-width: 0;
+}
+
+.tramo:not(:last-child) {
+  flex: 1 1 auto;
 }
 
 .tramo:not(:last-child)::after {
   content: '';
-  width: 40px;
+  flex: 1 1 auto;
+  min-width: 4px;
+  max-width: 40px;
+  width: calc(var(--e) * 2);
   border-top: 4px dotted var(--negro);
 }
 
@@ -38,16 +56,18 @@
 }
 
 .punto {
+  --punto: clamp(30px, calc(var(--e) * 2.3), 44px);
+  flex: none;
   display: grid;
   place-items: center;
-  width: 44px;
-  height: 44px;
+  width: var(--punto);
+  height: var(--punto);
   padding: 0;
   border: var(--trazo);
   border-radius: 50%;
   background: var(--hoja);
   font-family: var(--font-mano);
-  font-size: 24px;
+  font-size: calc(var(--punto) * 0.55);
   font-weight: 700;
   line-height: 1;
 }
@@ -57,9 +77,21 @@
 }
 
 .punto--actual {
-  width: 56px;
-  height: 56px;
+  width: calc(var(--punto) * 1.27);
+  height: calc(var(--punto) * 1.27);
   border-width: 4px;
   background: var(--canaguate);
-  font-size: 30px;
+  font-size: calc(var(--punto) * 0.68);
+}
+
+/* Vertical: navegación arriba a todo lo ancho; el panel queda abajo */
+@media (max-aspect-ratio: 1 / 1), (max-width: 900px) {
+  .navegacion {
+    top: var(--m);
+    right: var(--m);
+    bottom: auto;
+    max-width: none;
+    justify-content: space-between;
+    rotate: 0.4deg;
+  }
 }

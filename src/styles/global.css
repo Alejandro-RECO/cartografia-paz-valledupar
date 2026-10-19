@@ -66,10 +66,11 @@ button {
 }
 
 .cinta {
+  --alto-cinta: clamp(22px, calc(var(--e) * 1.9), 36px);
   position: absolute;
-  top: -18px;
-  width: 140px;
-  height: 36px;
+  top: calc(var(--alto-cinta) / -2);
+  width: clamp(80px, calc(var(--e) * 7.3), 140px);
+  height: var(--alto-cinta);
   background: var(--cinta);
   pointer-events: none;
 }

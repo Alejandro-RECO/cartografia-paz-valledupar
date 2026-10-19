@@ -23,16 +23,17 @@
 
 /* Por visitar = blanco, visitada = cañaguate, actual = más grande con halo */
 .marcador__circulo {
+  --pin: clamp(36px, calc(var(--e) * 2.9), 56px);
   display: grid;
   place-items: center;
-  width: 56px;
-  height: 56px;
+  width: var(--pin);
+  height: var(--pin);
   padding: 0;
   border: var(--trazo);
   border-radius: var(--radio-circulo);
   background: var(--hoja);
   font-family: var(--font-mano);
-  font-size: 30px;
+  font-size: calc(var(--pin) * 0.54);
   font-weight: 700;
   line-height: 1;
   transition:
@@ -47,25 +48,25 @@
 }
 
 .marcador__circulo--actual {
-  width: 88px;
-  height: 88px;
+  width: calc(var(--pin) * 1.57);
+  height: calc(var(--pin) * 1.57);
   border-width: 4px;
   background: var(--canaguate);
-  font-size: 48px;
+  font-size: calc(var(--pin) * 0.86);
   box-shadow:
-    0 0 0 9px rgba(242, 183, 5, 0.35),
-    0 0 0 12px var(--negro);
+    0 0 0 calc(var(--pin) * 0.16) rgba(242, 183, 5, 0.35),
+    0 0 0 calc(var(--pin) * 0.21) var(--negro);
 }
 
 /* «(ubicación aproximada)»: nota a mano sobre una tira de papel */
 .marcador__etiqueta {
-  max-width: 340px;
+  max-width: clamp(200px, calc(var(--e) * 17.7), 340px);
   padding: 2px 12px 4px;
   background: var(--hoja);
   border: 2px solid var(--negro);
   border-radius: 4px;
   font-family: var(--font-mano);
-  font-size: 22px;
+  font-size: clamp(14px, calc(var(--e) * 1.15), 22px);
   line-height: 1.2;
   text-align: center;
 }
@@ -93,26 +94,33 @@
 }
 
 .mapa--lejos .anotacion--ciudad {
-  font-size: 36px;
+  font-size: clamp(22px, calc(var(--e) * 1.9), 36px);
 }
 
 .anotacion--ciudad {
-  font-size: 56px;
+  font-size: clamp(28px, calc(var(--e) * 2.9), 56px);
   font-weight: 700;
   color: var(--negro);
 }
 
 .anotacion--montana {
-  font-size: 32px;
+  font-size: clamp(18px, calc(var(--e) * 1.7), 32px);
   color: var(--verde);
 }
 
 .anotacion--agua {
-  font-size: 28px;
+  font-size: clamp(16px, calc(var(--e) * 1.45), 28px);
   color: var(--azul);
 }
 
 .maplibregl-ctrl-attrib {
   font-family: var(--font-texto);
   font-size: 0.75rem;
+}
+
+/* Vertical (tablet): el zoom se hace con dos dedos; los botones +/− quedarían sobre el panel */
+@media (max-aspect-ratio: 1 / 1), (max-width: 900px) {
+  .maplibregl-ctrl-bottom-right .maplibregl-ctrl-group {
+    display: none;
+  }
 }

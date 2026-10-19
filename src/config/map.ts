@@ -9,10 +9,6 @@ export const CAMARA_GENERAL = { pitch: 50, bearing: -15 }
  */
 export const CAMARA_PARADA: Camara = { zoom: 13.2, pitch: 60, bearing: -15 }
 
-/** Espacio que ocupan las hojas sobre el mapa, para que el punto quede en la parte visible. */
-export const MARGEN_PORTADA = { top: 120, bottom: 140, left: 1000, right: 460 } // título a la izquierda, convenciones a la derecha
-export const MARGEN_PARADA = { top: 80, bottom: 200, left: 80, right: 780 }
-
 /** Cuánto se exagera el relieve. 1 = real; 1.5 hace visible la Sierra sin deformar la ciudad. */
 export const EXAGERACION_TERRENO = 1.5
 

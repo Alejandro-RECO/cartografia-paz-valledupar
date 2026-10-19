@@ -1,14 +1,16 @@
 .portada {
   position: fixed;
-  left: 5vw;
-  bottom: 7.5vh;
+  left: var(--m);
+  bottom: var(--m);
   z-index: 10;
   width: min(820px, 44vw);
-  padding: 48px 56px 52px;
+  max-height: calc(100dvh - 2 * var(--m));
+  overflow-y: auto;
+  padding: var(--pad-hoja) calc(var(--pad-hoja) * 1.15);
   rotate: -0.8deg;
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: var(--hueco);
 }
 
 .portada h1 {
@@ -37,7 +39,7 @@
   display: flex;
   align-items: center;
   flex-wrap: wrap;
-  gap: 32px;
+  gap: var(--hueco) calc(var(--hueco) * 1.5);
 }
 
 .portada__accion .boton {
@@ -49,4 +51,13 @@
   margin: 0;
   font-size: var(--t-pequeno);
   color: var(--tierra);
+}
+
+/* Vertical: la portada ocupa la franja inferior y el mapa queda arriba */
+@media (max-aspect-ratio: 1 / 1), (max-width: 900px) {
+  .portada {
+    right: var(--m);
+    width: auto;
+    max-height: 62dvh;
+  }
 }

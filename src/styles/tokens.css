@@ -21,12 +21,25 @@
   --font-mano: 'Kalam', 'Comic Sans MS', cursive; /* títulos, números, anotaciones */
   --font-texto: 'Atkinson Hyperlegible Next Variable', system-ui, sans-serif;
 
-  /* Escala para proyector 1920×1080: 104 / 68 / 38 / 27 / 22 px */
-  --t-portada: clamp(3.5rem, 5.4vw, 6.5rem);
-  --t-titulo: clamp(2.6rem, 3.55vw, 4.25rem);
-  --t-boton: clamp(1.5rem, 1.6vw, 2rem);
-  --t-texto: clamp(1.1rem, 1.4vw, 1.7rem);
-  --t-pequeno: clamp(0.95rem, 1.15vw, 1.4rem);
+  /*
+   * Unidad de escala: 1% del lado más limitante de una pantalla 16:9.
+   * En 1920×1080 vale 19.2px (diseño original); en 1366×768, 13.7px; en 1024×768, 10.2px.
+   * Todo tamaño se escribe como calc(var(--e) * N) dentro de un clamp con mínimo legible.
+   */
+  --e: min(1vw, 1.78vh);
+
+  /* Tipografía (en 1920×1080: 104 / 68 / 31 / 27 / 22 px) */
+  --t-portada: clamp(2.4rem, calc(var(--e) * 5.4), 6.5rem);
+  --t-titulo: clamp(1.75rem, calc(var(--e) * 3.5), 4.25rem);
+  --t-boton: clamp(1.1rem, calc(var(--e) * 1.6), 2rem);
+  --t-texto: clamp(1rem, calc(var(--e) * 1.4), 1.7rem);
+  --t-pequeno: clamp(0.875rem, calc(var(--e) * 1.15), 1.4rem);
+
+  /* Espacios y medidas de las hojas */
+  --m: clamp(14px, calc(var(--e) * 3), 64px); /* margen entre hojas y borde de pantalla */
+  --pad-hoja: clamp(18px, calc(var(--e) * 2.7), 56px);
+  --hueco: clamp(10px, calc(var(--e) * 1.05), 22px);
+  --ancho-panel: clamp(340px, 35vw, 680px);
 
   /* Bordes de marcador: radios irregulares para que nada se vea hecho con regla */
   --trazo: 3px solid var(--negro);
@@ -35,4 +48,11 @@
   --sombra-recorte: 4px 5px 0 var(--negro);
 
   --transicion: 350ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* Pantallas verticales o angostas (tablet en vertical): las hojas pasan arriba y abajo del mapa */
+@media (max-aspect-ratio: 1 / 1), (max-width: 900px) {
+  :root {
+    --e: min(1.35vw, 1vh);
+  }
 }
